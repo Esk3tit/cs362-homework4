@@ -12,10 +12,10 @@ class TestCubeVolume(unittest.TestCase):
     # Test out regular values or values that were expected to be used
     def test_cube_expected(self):
         self.assertEqual(avg_list_elem.avg_elements([1, 2, 3]), 2)
-        self.assertEqual(avg_list_elem.avg_elements(5, 7, 9, 4), 6.25)
+        self.assertEqual(avg_list_elem.avg_elements([5, 7, 9, 4]), 6.25)
 
     # Test out possible type errors (floats, strings)
-    # Type error on the string, test fails
+    # Type error on the list with strings, test fails
     def test_mixed_list(self):
         self.assertEqual(avg_list_elem.avg_elements([-1, 3.5, 7.25, 10]), 4.9375)
         self.assertEqual(avg_list_elem.avg_elements([1, 2, 3, '4', 'String']), 2)
