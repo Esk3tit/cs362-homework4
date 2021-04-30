@@ -1,9 +1,9 @@
 import unittest
-import avg_list_elem
+import full_name
 
 
 # Test Class inheriting from unittest.TestCase
-class TestAvgListElement(unittest.TestCase):
+class TestFullName(unittest.TestCase):
 
     # Since there are only 3 required test cases, each one is its own function def
     def test_empty_list(self):
