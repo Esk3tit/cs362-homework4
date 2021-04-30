@@ -6,19 +6,20 @@ import full_name
 class TestFullName(unittest.TestCase):
 
     # Since there are only 3 required test cases, each one is its own function def
-    def test_empty_list(self):
-        self.assertEqual(avg_list_elem.avg_elements([]), 0)
+    def test_empty_name(self):
+        self.assertEqual(full_name.full_name("", ""), " ")
 
     # Test out regular values or values that were expected to be used
-    def test_cube_expected(self):
-        self.assertEqual(avg_list_elem.avg_elements([1, 2, 3]), 2)
-        self.assertEqual(avg_list_elem.avg_elements([5, 7, 9, 4]), 6.25)
+    def test_full_name_expected(self):
+        self.assertEqual(full_name.full_name("John", "Doe"), "John Doe")
+        self.assertEqual(full_name.full_name("Foo", "Bar"), "Foo Bar")
 
-    # Test out possible type errors (floats, strings)
-    # Type error on the list with strings, test fails
-    def test_mixed_list(self):
-        self.assertEqual(avg_list_elem.avg_elements([-1, 3.5, 7.25, 10]), 4.9375)
-        self.assertEqual(avg_list_elem.avg_elements([1, 2, 3, '4', 'String']), 2)
+    # Test out non strings (integers, floats)
+    # Type error from all cases in this function because of the attempt to concatenate
+    # a space
+    def test_non_string(self):
+        self.assertEqual(full_name.full_name(3, "Smith"), "3 Smith")
+        self.assertEqual(full_name.full_name(1.5, 1.5), 3)
 
 
 if __name__ == "__main__":

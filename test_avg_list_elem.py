@@ -10,7 +10,7 @@ class TestAvgListElement(unittest.TestCase):
         self.assertEqual(avg_list_elem.avg_elements([]), 0)
 
     # Test out regular values or values that were expected to be used
-    def test_cube_expected(self):
+    def test_avg_list_expected(self):
         self.assertEqual(avg_list_elem.avg_elements([1, 2, 3]), 2)
         self.assertEqual(avg_list_elem.avg_elements([5, 7, 9, 4]), 6.25)
 
