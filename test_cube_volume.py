@@ -20,3 +20,7 @@ class TestCubeVolume(unittest.TestCase):
     def test_cube_type(self):
         self.assertEqual(cube_volume.vol_cube(2.5), 15.625)
         self.assertEqual(cube_volume.vol_cube('5'), 125)
+
+
+if __name__ == "__main__":
+    unittest.main()
